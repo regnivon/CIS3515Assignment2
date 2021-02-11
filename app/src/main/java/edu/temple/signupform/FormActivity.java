@@ -1,10 +1,13 @@
 package edu.temple.signupform;
 
+import android.content.Context;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -14,6 +17,7 @@ import java.util.List;
 
 public class FormActivity extends AppCompatActivity {
 
+    private final int USERNAME = 1;
     private final int PASSWORD = 2;
     private final int PASSWORD_CONFIRM = 3;
     private final int PASSWORD_MISMATCH = 4;
@@ -82,15 +86,22 @@ public class FormActivity extends AppCompatActivity {
             }
         }
 
-        if (TextUtils.equals(inputFields.get(PASSWORD).getText().toString(),
+        if (!TextUtils.equals(inputFields.get(PASSWORD).getText().toString(),
                 inputFields.get(PASSWORD_CONFIRM).getText().toString()))
         {
+
             errorFields.get(PASSWORD).setText(errorTexts.get(PASSWORD_MISMATCH));
             error = true;
+
         }
 
         if (!error) {
+            Context context = getApplicationContext();
+            CharSequence text = "Welcome, " + inputFields.get(USERNAME).getText().toString() + " to the SignUpForm App";
+            int duration = Toast.LENGTH_SHORT;
 
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         }
     }
 }

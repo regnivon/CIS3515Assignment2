@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">SignUpForm</string>
     <string name="email">Email:</string>
-    <string name="user_name">User Name</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="user_name">User Name:</string>
+    <string name="password">Password:</string>
+    <string name="confirm_password">Confirm Password:</string>
     <string name="submit">Submit</string>
 
 
     <!--- Error messages -->
 
-    <string name="emailError">The Password Confirmation field is required.</string>
-    <string name="usernameError">The Password Confirmation field is required.</string>
-    <string name="passwordError">The Password Confirmation field is required.</string>
+    <string name="emailError">The email field is required.</string>
+    <string name="usernameError">The username field is required.</string>
+    <string name="passwordError">The Password field is required.</string>
     <string name="confirmPasswordError">The Password Confirmation field is required.</string>
 
-    <string name="confirmPasswordMismatchError">The Password and Password Confirmation fields must match.</string>
+    <string name="confirmPasswordMismatchError">The Password fields must match.</string>
 </resources>
